@@ -1,0 +1,79 @@
+body {
+  display: flex;
+  flex-flow: column wrap-reverse ;
+  text-align: center;
+  background-color: #95a5a6;
+  color: orange;
+}
+h1 {
+  text-align: center;
+  font-family: 'Nosifer', cursive;
+  font-size: 3em;
+}
+.rowtop {
+  flex: 1 100%;
+  border: solid;
+  font-family: 'lobster',cursive;
+}
+.second , .third ,  .fourth , .fifth , .sixth , .seventh , .eighth , .ninth , .tenth {
+  flex: 1 auto;
+  display: inline-block;
+  border: solid;
+  font-family: 'lobster',cursive;
+  max-width: 400px;
+  max-height: 300px;
+
+}
+.group1 {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.group2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.group3 {
+display: flex;
+justify-content: space-between;
+}
+@keyframes bounce  {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+
+}
+.trophyLeft , .trophyRight {
+  width: 150px;
+  height: 150px;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+.rowtop:hover , .second:hover , .third:hover ,  .fourth:hover , .fifth:hover , .sixth:hover , .seventh:hover , .eighth:hover , .ninth:hover , .tenth:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
